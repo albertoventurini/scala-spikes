@@ -14,14 +14,15 @@ object Point {
     val numbers = s.split(" ").map(_.toInt)
     new Point(numbers(0), numbers(1))
   }
+
+  def apply(x: Int, y: Int) = new Point(x, y)
 }
 
 
 class Segment(p1: Point, p2: Point) {
-
   def length: Double = Math.sqrt( Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2) )
-
 }
+
 
 class Polygon(points: List[Point]) {
 

@@ -9,19 +9,19 @@ import Utils._
 class PolygonSuite extends FunSuite {
 
   test("length of a straight segment") {
-    val segment = new Segment(new Point(0, 0), new Point(0, 1))
+    val segment = new Segment(Point(0, 0), Point(0, 1))
 
     assert(segment.length === 1.0)
   }
 
   test("length of a slanted segment") {
-    val segment = new Segment(new Point(0, 0), new Point(1, 1))
+    val segment = new Segment(Point(0, 0), Point(1, 1))
 
     assert(segment.length === Math.sqrt(2.0))
   }
 
   test("calculate the perimeter correctly") {
-    val pol = new Polygon(List( new Point(0, 0), new Point(0, 1), new Point(1, 1), new Point(1, 0) ))
+    val pol = new Polygon(List( Point(0, 0), Point(0, 1), Point(1, 1), Point(1, 0) ))
 
     val result = pol.perimeter
 
@@ -35,7 +35,7 @@ class PolygonSuite extends FunSuite {
   }
 
   test("calculate the area correctly") {
-    val pol = new Polygon(List( new Point(0, 0), new Point(0, 1), new Point(1, 1), new Point(1, 0) ))
+    val pol = new Polygon(List( Point(0, 0), Point(0, 1), Point(1, 1), Point(1, 0) ))
 
     val result = pol.area
 
